@@ -68,15 +68,16 @@ $ yarn test
 
 ```graphql
 query {
-  dataRegistries(first: 5) {
+  collections(
+    first: 5
+    orderBy: [BLOCK_HEIGHT_DESC]
+    filter: { chainId: { equalTo: 20240801 } }
+  ) {
     nodes {
-      id
       chainId
+      id
       blockHeight
-      timestamp
-      dapp
       address
-      uri
     }
   }
 }
@@ -87,16 +88,31 @@ The result should look something like this:
 ```json
 {
   "data": {
-    "dataRegistries": {
+    "collections": {
       "nodes": [
         {
-          "id": "0xcf9748bf255125e6143fe896de36ed2b7c329108",
-          "chainId": 43113,
-          "blockHeight": "36375106",
-          "timestamp": "1705376380",
-          "dapp": "0x2f1038982da18dDe6934D972128c50c079845176",
-          "address": "0xcf9748bf255125e6143fe896de36ed2b7c329108",
-          "uri": "ipfs://account-3"
+          "chainId": 20240801,
+          "id": "0xc477ef1211e3c20f9069b1d159a88ae2a8024978",
+          "blockHeight": "1460",
+          "address": "0xc477ef1211e3c20f9069b1d159a88ae2a8024978"
+        },
+        {
+          "chainId": 20240801,
+          "id": "0x97a50967fd59b2aab8841cff7304f77f74e22dcf",
+          "blockHeight": "1459",
+          "address": "0x97a50967fd59b2aab8841cff7304f77f74e22dcf"
+        },
+        {
+          "chainId": 20240801,
+          "id": "0x17e5896d4fdb55c79481cb96e07b01dfda0f1382",
+          "blockHeight": "212",
+          "address": "0x17e5896d4fdb55c79481cb96e07b01dfda0f1382"
+        },
+        {
+          "chainId": 20240801,
+          "id": "0x7136c629e76c0dcad52c48bfa41ad35c46aeecf4",
+          "blockHeight": "187",
+          "address": "0x7136c629e76c0dcad52c48bfa41ad35c46aeecf4"
         }
       ]
     }
