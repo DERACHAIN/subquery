@@ -7,6 +7,7 @@ export const CHAIN_LIST = {
   BNB: 56,
   AVAX_TESTNET: 43113,
   BNB_TESTNET: 97,
+  DERA_TESTNET: 20240801,
 };
 
 export async function getNFT(

@@ -15,6 +15,9 @@ export async function handleTransferAvaxTestnet(log: TransferLog) {
 export async function handleTransferBnbTestnet(log: TransferLog) {
   await handleTransfer(CHAIN_LIST.BNB_TESTNET, log);
 }
+export async function handleTransferDERATestnet(log: TransferLog) {
+  await handleTransfer(CHAIN_LIST.DERA_TESTNET, log);
+}
 
 export async function handleTransfer(
   chainId: number,

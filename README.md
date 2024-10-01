@@ -19,12 +19,12 @@ The multi-chains [SubQuery](https://subquery.network) project for NFT2.0 protoco
 $ yarn
 ```
 
-- Create .env file of special chain from template. Ex for **avax-testnet**:
+- Create .env file of special chain from template. Ex for **avax**:
 ```bash
-$ cp .env.example .env.avax-testnet
+$ cp .env.example .env.avax
 ```
 
-- Fulfill contract address, block number, etc to env file (`.env.avax-testnet`)
+- Populate contract address, block number, etc to `.env.avax` file
 
 ## Build
 - Generate file yaml and all manifest for a chain:
@@ -43,14 +43,8 @@ $ CHAIN="avax" yarn codegen -f project-multichain.ts && mv project-multichain.ya
 
 - Compile code
 
-> Mainnets
 ```bash
 $ yarn build -f subquery-multichain.yaml
-```
-
-> Testnets
-```bash
-$ yarn build -f subquery-multichain-testnet.yaml
 ```
 
 > *This command will compile TS code and store artifacts to /dist folder, every update logic, including configuration in project-multichain.ts would require to reexecute this command*
