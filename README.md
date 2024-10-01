@@ -175,5 +175,5 @@ $ docker logs -f <subquery-node-container>
 ```
 
 ## License
-Copyright belongs to [DareNFT - Alpha Waves PTE. LTD](https://darenft.com/), 2023
+Copyright belongs to [DERA chain](https://derachain.com), 2023-2024.
 
