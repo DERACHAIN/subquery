@@ -1,6 +1,6 @@
-# NFT2.0 SubQuery
+# Multi-chains SubQuery
 
-The [SubQuery](https://subquery.network) project for NFT2.0 protocol. This includes indexer for all protocol onchain events, including but not limited to:
+The multi-chains [SubQuery](https://subquery.network) project for NFT2.0 protocol. This includes indexer for all protocol onchain events, including but not limited to:
 > 1. Factory events: create data-registries, collections, derived-accounts
 > 2. Data-registry events: write, derive.
 > 3. Collection events: mint, burn, transfer.
@@ -8,7 +8,7 @@ The [SubQuery](https://subquery.network) project for NFT2.0 protocol. This inclu
 > 5. Addons events: addons created.
 
 ## Prerequisites
-- [NodeJS v18.x](https://nodejs.org/en/blog/release/v18.17.0)
+- [NodeJS v20 LTS](https://nodejs.org/en/blog/release/v20.9.0)
 - [Docker LTS](https://docs.docker.com/engine/install/)
 - [Docker Compose Plugin LTS](https://docs.docker.com/compose/install/linux/)
 - [SubQuery CLI](https://academy.subquery.network/quickstart/quickstart.html#_1-install-the-subquery-cli)

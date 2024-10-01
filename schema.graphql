@@ -1,0 +1,200 @@
+# To improve query performance, we strongly suggest adding indexes to any field that you plan to filter or sort by
+# Add the `@index` or `@index(unique: true)` annotation after any non-key field
+# https://academy.subquery.network/build/graphql.html#indexing-by-non-primary-key-field
+
+############################################
+#                 NFT2.0
+############################################
+type DataRegistry @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  address: String
+  dapp: String! @index
+  uri: String
+  version: String
+  writedNFTDatas: [DataRegistryNFTData] @derivedFrom(field: "dataRegistry")
+}
+
+type DataRegistrySchema @entity {
+  id: ID!
+  registry: DataRegistry!
+  key: String!
+  schema: String!
+}
+
+type DataRegistryNFTData @entity @compositeIndexes(fields: [["collection", "tokenId"]]) {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  txHash: String
+  dataRegistry: DataRegistry!
+  collection: String!
+  tokenId: BigInt!
+  key: String
+  value: String
+}
+
+type DataRegistryNFTInscription @entity {
+  id: ID!
+  blockHeight: BigInt
+  txHash: String
+  dataRegistry: DataRegistry!
+  collection: String!
+  tokenId: BigInt!
+  metadata: String  
+}
+
+type Collection @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  address: String
+  owner: String! @index
+  kind: Int
+}
+
+type NFT @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  collection: String! @index
+  tokenId: BigInt!
+  tokenUri: String
+  owner: String! @index
+  isBurned: Boolean
+  isDerived: Boolean
+  underlyingNFT: NFT
+  tbaAccounts: [ERC6551Account] @derivedFrom(field: "underlyingNFT")
+}
+
+type DerivedAccount @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  address: String
+  underlyingNFT: NFT!
+  royaltyClaimed: [DerivedAccountRoyaltyClaimed] @derivedFrom(field: "derivedAccount")
+}
+
+type DerivedAccountRoyaltyClaimed @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  txHash: String
+  derivedAccount: DerivedAccount!
+  token: String
+  amount: BigInt
+  receiver: String
+}
+
+type AddonsCollection @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  contract: String
+  collection: String! @index
+  kind: Int
+  campaignId: String! @index
+  data: String
+}
+
+type ERC6551Account @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  account: String!
+  implementation: String!
+  salt: String!
+  underlyingNFT: NFT!
+}
+
+############################################
+#               Raw Event
+############################################
+
+type Transfer @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  collection: String! @index
+  tokenId: BigInt!
+  from: String!
+  to: String!
+}
+
+############################################
+#               MARKETPLACE
+############################################
+type TakerBid @entity @compositeIndexes(fields: [["collection", "tokenId"]]) {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  taker: String! @index
+  maker: String! @index
+  strategy: String
+  orderHash: String
+  orderNonce: BigInt
+  currency: String
+  collection: String
+  tokenId: BigInt
+  amount: BigInt
+  price: BigInt
+}
+
+type TakerAsk @entity @compositeIndexes(fields: [["collection", "tokenId"]]) {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  taker: String! @index
+  maker: String! @index
+  strategy: String
+  orderHash: String
+  orderNonce: BigInt
+  currency: String
+  collection: String
+  tokenId: BigInt
+  amount: BigInt
+  price: BigInt
+}
+
+type CancelAllOrders @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  user: String! @index
+  newMinNonce: BigInt
+}
+
+type CancelMultipleOrders @entity {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  user: String! @index
+  orderNonces: [BigInt]
+}
+
+type RoyaltyPayment @entity @compositeIndexes(fields: [["collection", "tokenId"]]) {
+  id: ID!
+  chainId: Int! @index
+  blockHeight: BigInt
+  timestamp: BigInt
+  collection: String
+  tokenId: BigInt
+  royaltyRecipient: String
+  currency: String
+  amount: BigInt
+}
