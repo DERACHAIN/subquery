@@ -18,15 +18,23 @@ import { EthereumLog } from "@subql/types-ethereum";
 export async function handleSafeWriteAvax(log: WriteLog) {
   await handleSafeWrite(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleSafeWriteBnb(log: WriteLog) {
   await handleSafeWrite(CHAIN_LIST.BNB, log);
 }
+
 export async function handleSafeWriteAvaxTestnet(log: WriteLog) {
   await handleSafeWrite(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleSafeWriteBnbTestnet(log: WriteLog) {
   await handleSafeWrite(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleSafeWriteDERATestnet(log: WriteLog) {
+  await handleSafeWrite(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleSafeWrite(
   chainId: number,
   log: WriteLog
@@ -51,15 +59,23 @@ export async function handleSafeWrite(
 export async function handleWriteBatchAvax(log: WriteBatchLog) {
   await handleWriteBatch(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleWriteBatchBnb(log: WriteBatchLog) {
   await handleWriteBatch(CHAIN_LIST.BNB, log);
 }
+
 export async function handleWriteBatchAvaxTestnet(log: WriteBatchLog) {
   await handleWriteBatch(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleWriteBatchBnbTestnet(log: WriteBatchLog) {
   await handleWriteBatch(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleWriteBatchDERATestnet(log: WriteBatchLog) {
+  await handleWriteBatch(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleWriteBatch(
   chainId: number,
   log: WriteBatchLog
@@ -117,15 +133,23 @@ function createNFTData(
 export async function handleComposeAvax(log: ComposeLog) {
   await handleCompose(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleComposeBnb(log: ComposeLog) {
   await handleCompose(CHAIN_LIST.BNB, log);
 }
+
 export async function handleComposeAvaxTestnet(log: ComposeLog) {
   await handleCompose(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleComposeBnbTestnet(log: ComposeLog) {
   await handleCompose(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleComposeDERATestnet(log: ComposeLog) {
+  await handleCompose(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleCompose(
   chainId: number,
   log: ComposeLog
@@ -213,15 +237,24 @@ function getDataId(
 export async function handleDeriveAvax(log: DeriveLog) {
   await handleDerive(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleDeriveBnb(log: DeriveLog) {
   await handleDerive(CHAIN_LIST.BNB, log);
 }
+
 export async function handleDeriveAvaxTestnet(log: DeriveLog) {
   await handleDerive(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleDeriveBnbTestnet(log: DeriveLog) {
   await handleDerive(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleDeriveDERATestnet(log: DeriveLog) {
+  await handleDerive(CHAIN_LIST.DERA_TESTNET, log);
+}
+
+
 export async function handleDerive(
   chainId: number,
   log: DeriveLog
@@ -250,15 +283,23 @@ export async function handleDerive(
 export async function handleReclaimAvax(log: ReclaimLog) {
   await handleReclaim(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleReclaimBnb(log: ReclaimLog) {
   await handleReclaim(CHAIN_LIST.BNB, log);
 }
+
 export async function handleReclaimAvaxTestnet(log: ReclaimLog) {
   await handleReclaim(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleReclaimBnbTestnet(log: ReclaimLog) {
   await handleReclaim(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleReclaimDERATestnet(log: ReclaimLog) {
+  await handleReclaim(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleReclaim(
   chainId: number,
   log: ReclaimLog
@@ -281,15 +322,23 @@ export async function handleReclaim(
 export async function handleTransferDerivedAvax(log: TransferLog) {
   await handleTransferDerived(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleTransferDerivedBnb(log: TransferLog) {
   await handleTransferDerived(CHAIN_LIST.BNB, log);
 }
+
 export async function handleTransferDerivedAvaxTestnet(log: TransferLog) {
   await handleTransferDerived(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleTransferDerivedBnbTestnet(log: TransferLog) {
   await handleTransferDerived(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleTransferDerivedDERATestnet(log: TransferLog) {
+  await handleTransferDerived(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleTransferDerived(
   chainId: number,
   log: TransferLog
@@ -334,15 +383,23 @@ export async function handleTransferDerived(
 export async function handleURIUpdatedAvax(log: URIUpdatedLog) {
   await handleURIUpdated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleURIUpdatedBnb(log: URIUpdatedLog) {
   await handleURIUpdated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleURIUpdatedAvaxTestnet(log: URIUpdatedLog) {
   await handleURIUpdated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleURIUpdatedBnbTestnet(log: URIUpdatedLog) {
   await handleURIUpdated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleURIUpdatedDERATestnet(log: URIUpdatedLog) {
+  await handleURIUpdated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleURIUpdated(
   chainId: number,
   log: URIUpdatedLog

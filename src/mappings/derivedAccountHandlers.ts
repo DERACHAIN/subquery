@@ -6,14 +6,21 @@ import { CHAIN_LIST } from "./utils";
 export async function handleRoyaltyClaimedAvax(log: RoyaltyClaimedLog) {
   await handleRoyaltyClaimed(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleRoyaltyClaimedBnb(log: RoyaltyClaimedLog) {
   await handleRoyaltyClaimed(CHAIN_LIST.BNB, log);
 }
+
 export async function handleRoyaltyClaimedAvaxTestnet(log: RoyaltyClaimedLog) {
   await handleRoyaltyClaimed(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleRoyaltyClaimedBnbTestnet(log: RoyaltyClaimedLog) {
   await handleRoyaltyClaimed(CHAIN_LIST.BNB_TESTNET, log);
+}
+
+export async function handleRoyaltyClaimedDERATestnet(log: RoyaltyClaimedLog) {
+  await handleRoyaltyClaimed(CHAIN_LIST.DERA_TESTNET, log);
 }
 
 export async function handleRoyaltyClaimed(

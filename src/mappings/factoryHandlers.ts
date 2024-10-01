@@ -25,21 +25,31 @@ export async function handleDataRegistryCreatedAvax(
 ) {
   await handleDataRegistryCreated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleDataRegistryCreatedBnb(
   log: DataRegistryCreatedLog
 ) {
   await handleDataRegistryCreated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleDataRegistryCreatedAvaxTestnet(
   log: DataRegistryCreatedLog
 ) {
   await handleDataRegistryCreated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleDataRegistryCreatedBnbTestnet(
   log: DataRegistryCreatedLog
 ) {
   await handleDataRegistryCreated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleDataRegistryCreatedDERATestnet(
+  log: DataRegistryCreatedLog
+) {
+  await handleDataRegistryCreated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleDataRegistryCreated(
   chainId: number,
   log: DataRegistryCreatedLog
@@ -75,21 +85,31 @@ export async function handleDataRegistryV2CreatedAvax(
 ) {
   await handleDataRegistryV2Created(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleDataRegistryV2CreatedBnb(
   log: DataRegistryV2CreatedLog
 ) {
   await handleDataRegistryV2Created(CHAIN_LIST.BNB, log);
 }
+
 export async function handleDataRegistryV2CreatedAvaxTestnet(
   log: DataRegistryV2CreatedLog
 ) {
   await handleDataRegistryV2Created(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleDataRegistryV2CreatedBnbTestnet(
   log: DataRegistryV2CreatedLog
 ) {
   await handleDataRegistryV2Created(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleDataRegistryV2CreatedDERATestnet(
+  log: DataRegistryV2CreatedLog
+) {
+  await handleDataRegistryV2Created(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleDataRegistryV2Created(
   chainId: number,
   log: DataRegistryV2CreatedLog
@@ -123,19 +143,29 @@ export async function handleDataRegistryV2Created(
 export async function handleCollectionCreatedAvax(log: CollectionCreatedLog) {
   await handleCollectionCreated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleCollectionCreatedBnb(log: CollectionCreatedLog) {
   await handleCollectionCreated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleCollectionCreatedAvaxTestnet(
   log: CollectionCreatedLog
 ) {
   await handleCollectionCreated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleCollectionCreatedBnbTestnet(
   log: CollectionCreatedLog
 ) {
   await handleCollectionCreated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleCollectionCreatedDERATestnet(
+  log: CollectionCreatedLog
+) {
+  await handleCollectionCreated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleCollectionCreated(
   chainId: number,
   log: CollectionCreatedLog
@@ -167,21 +197,31 @@ export async function handleDerivedAccountCreatedAvax(
 ) {
   await handleDerivedAccountCreated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleDerivedAccountCreatedBnb(
   log: DerivedAccountCreatedLog
 ) {
   await handleDerivedAccountCreated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleDerivedAccountCreatedAvaxTestnet(
   log: DerivedAccountCreatedLog
 ) {
   await handleDerivedAccountCreated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleDerivedAccountCreatedBnbTestnet(
   log: DerivedAccountCreatedLog
 ) {
   await handleDerivedAccountCreated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleDerivedAccountCreatedDERATestnet(
+  log: DerivedAccountCreatedLog
+) {
+  await handleDerivedAccountCreated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleDerivedAccountCreated(
   chainId: number,
   log: DerivedAccountCreatedLog
@@ -215,15 +255,23 @@ export async function handleDerivedAccountCreated(
 export async function handleAddonsCreatedAvax(log: AddonsCreatedLog) {
   await handleAddonsCreated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleAddonsCreatedBnb(log: AddonsCreatedLog) {
   await handleAddonsCreated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleAddonsCreatedAvaxTestnet(log: AddonsCreatedLog) {
   await handleAddonsCreated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleAddonsCreatedBnbTestnet(log: AddonsCreatedLog) {
   await handleAddonsCreated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleAddonsCreatedDERATestnet(log: AddonsCreatedLog) {
+  await handleAddonsCreated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleAddonsCreated(
   chainId: number,
   log: AddonsCreatedLog
@@ -253,21 +301,31 @@ export async function handleERC6551AccountCreatedAvax(
 ) {
   await handleERC6551AccountCreated(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleERC6551AccountCreatedBnb(
   log: ERC6551AccountCreatedLog
 ) {
   await handleERC6551AccountCreated(CHAIN_LIST.BNB, log);
 }
+
 export async function handleERC6551AccountCreatedAvaxTestnet(
   log: ERC6551AccountCreatedLog
 ) {
   await handleERC6551AccountCreated(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleERC6551AccountCreatedBnbTestnet(
   log: ERC6551AccountCreatedLog
 ) {
   await handleERC6551AccountCreated(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleERC6551AccountCreatedDERATestnet(
+  log: ERC6551AccountCreatedLog
+) {
+  await handleERC6551AccountCreated(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleERC6551AccountCreated(
   chainId: number,
   log: ERC6551AccountCreatedLog

@@ -18,15 +18,23 @@ import { CHAIN_LIST } from "./utils";
 export async function handleTakerBidLogAvax(log: TakerBidLog) {
   await handleTakerBidLog(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleTakerBidLogBnb(log: TakerBidLog) {
   await handleTakerBidLog(CHAIN_LIST.BNB, log);
 }
+
 export async function handleTakerBidLogAvaxTestnet(log: TakerBidLog) {
   await handleTakerBidLog(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleTakerBidLogBnbTestnet(log: TakerBidLog) {
   await handleTakerBidLog(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleTakerBidLogDERATestnet(log: TakerBidLog) {
+  await handleTakerBidLog(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleTakerBidLog(
   chainId: number,
   log: TakerBidLog
@@ -58,15 +66,23 @@ export async function handleTakerBidLog(
 export async function handleTakerAskLogAvax(log: TakerAskLog) {
   await handleTakerAskLog(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleTakerAskLogBnb(log: TakerAskLog) {
   await handleTakerAskLog(CHAIN_LIST.BNB, log);
 }
+
 export async function handleTakerAskLogAvaxTestnet(log: TakerAskLog) {
   await handleTakerAskLog(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleTakerAskLogBnbTestnet(log: TakerAskLog) {
   await handleTakerAskLog(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleTakerAskLogDERATestnet(log: TakerAskLog) {
+  await handleTakerAskLog(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleTakerAskLog(
   chainId: number,
   log: TakerAskLog
@@ -98,19 +114,29 @@ export async function handleTakerAskLog(
 export async function handleCancelAllOrdersLogAvax(log: CancelAllOrdersLog) {
   await handleCancelAllOrdersLog(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleCancelAllOrdersLogBnb(log: CancelAllOrdersLog) {
   await handleCancelAllOrdersLog(CHAIN_LIST.BNB, log);
 }
+
 export async function handleCancelAllOrdersLogAvaxTestnet(
   log: CancelAllOrdersLog
 ) {
   await handleCancelAllOrdersLog(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleCancelAllOrdersLogBnbTestnet(
   log: CancelAllOrdersLog
 ) {
   await handleCancelAllOrdersLog(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleCancelAllOrdersLogDERATestnet(
+  log: CancelAllOrdersLog
+) {
+  await handleCancelAllOrdersLog(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleCancelAllOrdersLog(
   chainId: number,
   log: CancelAllOrdersLog
@@ -136,21 +162,31 @@ export async function handleCancelMultipleOrdersLogAvax(
 ) {
   await handleCancelMultipleOrdersLog(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleCancelMultipleOrdersLogBnb(
   log: CancelMultipleOrdersLog
 ) {
   await handleCancelMultipleOrdersLog(CHAIN_LIST.BNB, log);
 }
+
 export async function handleCancelMultipleOrdersLogAvaxTestnet(
   log: CancelMultipleOrdersLog
 ) {
   await handleCancelMultipleOrdersLog(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleCancelMultipleOrdersLogBnbTestnet(
   log: CancelMultipleOrdersLog
 ) {
   await handleCancelMultipleOrdersLog(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleCancelMultipleOrdersLogDERATestnet(
+  log: CancelMultipleOrdersLog
+) {
+  await handleCancelMultipleOrdersLog(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleCancelMultipleOrdersLog(
   chainId: number,
   log: CancelMultipleOrdersLog
@@ -178,19 +214,29 @@ export async function handleCancelMultipleOrdersLog(
 export async function handleRoyaltyPaymentLogAvax(log: RoyaltyPaymentLog) {
   await handleRoyaltyPaymentLog(CHAIN_LIST.AVAX, log);
 }
+
 export async function handleRoyaltyPaymentLogBnb(log: RoyaltyPaymentLog) {
   await handleRoyaltyPaymentLog(CHAIN_LIST.BNB, log);
 }
+
 export async function handleRoyaltyPaymentLogAvaxTestnet(
   log: RoyaltyPaymentLog
 ) {
   await handleRoyaltyPaymentLog(CHAIN_LIST.AVAX_TESTNET, log);
 }
+
 export async function handleRoyaltyPaymentLogBnbTestnet(
   log: RoyaltyPaymentLog
 ) {
   await handleRoyaltyPaymentLog(CHAIN_LIST.BNB_TESTNET, log);
 }
+
+export async function handleRoyaltyPaymentLogDERATestnet(
+  log: RoyaltyPaymentLog
+) {
+  await handleRoyaltyPaymentLog(CHAIN_LIST.DERA_TESTNET, log);
+}
+
 export async function handleRoyaltyPaymentLog(
   chainId: number,
   log: RoyaltyPaymentLog

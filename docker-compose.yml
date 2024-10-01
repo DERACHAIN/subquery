@@ -34,8 +34,6 @@ services:
     command:
       - --name=app
       - --playground
-      # - --indexer=http://subquery-node:3000
-      - --subscription
 
   subquery-node-project-avax-testnet:
     image: onfinality/subql-node-ethereum:latest
@@ -60,6 +58,33 @@ services:
         - curl
         - -f
         - http://subquery-node-project-avax-testnet:3000/ready
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+  subquery-node-project-dera-testnet:
+    image: onfinality/subql-node-ethereum:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    environment:
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_DATABASE: postgres
+      DB_HOST: postgres
+      DB_PORT: "5432"
+    volumes:
+      - ./:/app
+    command:
+      - -f=app/project-dera-testnet.yaml
+      - --multi-chain
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://subquery-node-project-dera-testnet:3000/ready
       interval: 3s
       timeout: 5s
       retries: 10
