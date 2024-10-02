@@ -123,7 +123,7 @@ The result should look something like this:
 - Via cURL (after publishing project to Managed Service)
 ```bash
 $ curl -g -X POST -H "Content-type: application/json" \
--d '{"query": "query{dataRegistries(first:5) {nodes {id blockHeight dapp address uri}}}"}' \
+-d '{"query": "query{collections(first:5) {nodes {chainId id blockHeight address}}}"}' \
 <subquery-query-url>
 ```
 
