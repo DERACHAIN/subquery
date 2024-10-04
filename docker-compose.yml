@@ -88,3 +88,84 @@ services:
       interval: 3s
       timeout: 5s
       retries: 10
+
+  subquery-node-project-avax:
+    image: onfinality/subql-node-ethereum:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    environment:
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_DATABASE: postgres
+      DB_HOST: postgres
+      DB_PORT: "5432"
+    volumes:
+      - ./:/app
+    command:
+      - -f=app/project-avax.yaml
+      - --multi-chain
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://subquery-node-project-avax:3000/ready
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+  subquery-node-project-bnb:
+    image: onfinality/subql-node-ethereum:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    environment:
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_DATABASE: postgres
+      DB_HOST: postgres
+      DB_PORT: "5432"
+    volumes:
+      - ./:/app
+    command:
+      - -f=app/project-bnb.yaml
+      - --multi-chain
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://subquery-node-project-bnb:3000/ready
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+  subquery-node-project-bnb-testnet:
+    image: onfinality/subql-node-ethereum:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    environment:
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_DATABASE: postgres
+      DB_HOST: postgres
+      DB_PORT: "5432"
+    volumes:
+      - ./:/app
+    command:
+      - -f=app/project-bnb-testnet.yaml
+      - --multi-chain
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://subquery-node-project-bnb-testnet:3000/ready
+      interval: 3s
+      timeout: 5s
+      retries: 10

@@ -1,6 +1,6 @@
 # Multi-chains SubQuery
 
-The multi-chains [SubQuery](https://subquery.network) project for NFT2.0 protocol. This includes indexer for all protocol onchain events, including but not limited to:
+The multi-chains [SubQuery](https://subquery.network) project for NFT2.0 protocol. This includes indexer for all protocol on-chain events, including but not limited to:
 > 1. Factory events: create data-registries, collections, derived-accounts
 > 2. Data-registry events: write, derive.
 > 3. Collection events: mint, burn, transfer.
@@ -32,7 +32,7 @@ $ cp .env.example .env.avax
 $ CHAIN=<chain> yarn codegen -f project-multichain.ts && mv project-multichain.yaml project-<chain>.yaml
 ```
 
-> CHAIN env var can be one of supported chains, including: *avax, bnb, avax-testnet, bnb-testnet*
+> CHAIN env var can be one of supported chains, including: *dera-testnet, avax, bnb, avax-testnet, bnb-testnet*
 >
 > Eg., command for `avax`:
 ```bash

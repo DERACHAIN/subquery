@@ -5,3 +5,6 @@ query:
 projects:
   - project-avax-testnet.yaml
   - project-dera-testnet.yaml
+  - project-avax.yaml
+  - project-bnb.yaml
+  - project-bnb-testnet.yaml
